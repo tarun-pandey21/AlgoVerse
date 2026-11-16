@@ -1,0 +1,74 @@
+.topic-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 20px;
+  transition: transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease),
+    border-color var(--duration) var(--ease);
+}
+
+.topic-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-100);
+}
+
+.topic-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topic-card__level {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+}
+
+.topic-card__body {
+  flex: 1;
+}
+
+.topic-card__title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.topic-card__description {
+  margin-top: 4px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.topic-card__progress {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.topic-card__progress-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.topic-card__lessons {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-muted);
+}
+
+.topic-card__done {
+  color: var(--success);
+}
+
+.topic-card__percent {
+  font-weight: 700;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}

@@ -1,0 +1,41 @@
+.page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.page-header__text {
+  max-width: 680px;
+}
+
+.page-header__eyebrow {
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary-600);
+}
+
+.page-header__title {
+  font-size: 28px;
+  letter-spacing: -0.03em;
+}
+
+.page-header__description {
+  margin-top: 8px;
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.page-header__actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .page-header__title {
+    font-size: 24px;
+  }
+}

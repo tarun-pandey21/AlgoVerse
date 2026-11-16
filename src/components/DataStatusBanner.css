@@ -1,0 +1,59 @@
+.data-banners { display: flex; flex-direction: column; gap: 10px; margin-bottom: 18px; }
+
+.data-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+.data-banner > svg { flex-shrink: 0; margin-top: 2px; }
+.data-banner > div,
+.data-banner > p { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.data-banner a { color: var(--primary-600); font-weight: 600; }
+.data-banner__title { font-weight: 700; color: var(--text); }
+.data-banner__hint { font-size: 12.5px; color: var(--text-muted); margin-top: 2px; }
+
+.data-banner--error { background: var(--danger-50); border: 1px solid #fecaca; }
+.data-banner--error > svg { color: var(--danger); }
+.data-banner--warning { background: var(--warning-50); border: 1px solid #fde68a; }
+.data-banner--warning > svg { color: var(--warning-700); }
+.data-banner--info { background: var(--primary-50); border: 1px solid var(--primary-100); color: var(--primary-700); align-items: center; }
+.data-banner--muted { background: var(--bg-subtle); border: 1px solid var(--border); align-items: center; margin-bottom: 4px; }
+.data-banner--muted > svg { color: var(--text-muted); }
+
+.data-banner__action {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.data-banner__action:hover { border-color: var(--primary); color: var(--primary-600); }
+.data-banner__close {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+.data-banner__close:hover { background: rgba(0, 0, 0, 0.05); color: var(--text); }
+
+.spin { animation: data-spin 0.9s linear infinite; }
+@keyframes data-spin { to { transform: rotate(360deg); } }

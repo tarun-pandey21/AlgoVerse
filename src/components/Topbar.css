@@ -1,0 +1,209 @@
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: var(--topbar-h);
+  padding: 0 40px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.topbar__left,
+.topbar__right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.topbar__menu,
+.topbar__mobile-logo {
+  display: none;
+}
+
+.topbar__menu {
+  padding: 8px;
+  margin-left: -8px;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+}
+
+.topbar__menu:hover {
+  background: var(--bg-muted);
+}
+
+.topbar__title {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.topbar__date {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.topbar__streak {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 34px;
+  padding: 0 12px;
+  border-radius: var(--radius-full);
+  background: var(--orange-50);
+  border: 1px solid #fed7aa;
+  color: #c2410c;
+  font-size: 13px;
+  font-weight: 700;
+  transition: transform var(--duration) var(--ease);
+}
+
+.topbar__streak:hover {
+  transform: translateY(-1px);
+}
+
+.topbar__streak-label {
+  font-weight: 500;
+}
+
+.topbar__profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 10px 4px 4px;
+  border-radius: var(--radius-full);
+  transition: background var(--duration) var(--ease);
+}
+
+.topbar__profile:hover {
+  background: var(--bg-muted);
+}
+
+.topbar__avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--blue));
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.topbar__profile-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.topbar__name {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.topbar__role {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Sign in / account (Supabase Auth) */
+.topbar__signin {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 34px;
+  padding: 0 14px;
+  border-radius: var(--radius-full);
+  background: var(--primary);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: var(--shadow-primary);
+  transition: background var(--duration) var(--ease);
+}
+.topbar__signin:hover { background: var(--primary-600); }
+.topbar__account { position: relative; }
+button.topbar__profile { border: none; background: transparent; font: inherit; color: inherit; cursor: pointer; text-align: left; }
+.topbar__menu-pop {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  min-width: 240px;
+  padding: 6px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  z-index: 40;
+}
+.topbar__menu-head {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 8px 10px 10px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 12.5px;
+  color: var(--text-muted);
+  overflow-wrap: anywhere;
+}
+.topbar__menu-head svg { flex-shrink: 0; margin-top: 2px; color: var(--primary); }
+.topbar__menu-head strong { color: var(--text); font-weight: 600; }
+.topbar__menu-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-secondary);
+  font: inherit;
+  font-size: 13.5px;
+  cursor: pointer;
+  text-align: left;
+}
+.topbar__menu-item:hover { background: var(--bg-muted); color: var(--text); }
+
+@media (max-width: 1024px) {
+  .topbar {
+    padding: 0 24px;
+  }
+  .topbar__menu {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .topbar__profile-text,
+  .topbar__streak-label,
+  .topbar__signin span {
+    display: none;
+  }
+  .topbar__signin { padding: 0 10px; }
+  .topbar__profile {
+    padding: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .topbar {
+    padding: 0 16px;
+  }
+  .topbar__date {
+    display: none;
+  }
+  .topbar__mobile-logo {
+    display: inline-flex;
+  }
+}

@@ -1,0 +1,25 @@
+.code-editor {
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.code-editor .cm-editor {
+  height: 100%;
+}
+
+/* On small screens the editor gets a fixed comfortable height */
+@media (max-width: 1100px) {
+  .code-editor {
+    height: 440px;
+  }
+}
+
+@media (max-width: 640px) {
+  .code-editor {
+    height: 380px;
+  }
+  .code-editor .cm-editor {
+    font-size: 12.5px;
+  }
+}

@@ -1,0 +1,83 @@
+/* Rendered Markdown from Claude (see Markdown.jsx) */
+.md {
+  color: var(--text-secondary);
+  font-size: 0.94rem;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+.md > :first-child { margin-top: 0; }
+.md > :last-child { margin-bottom: 0; }
+.md p { margin: 0 0 0.75em; }
+.md strong { color: var(--text); font-weight: 600; }
+.md h3, .md h4, .md h5, .md h6 {
+  color: var(--text);
+  font-weight: 650;
+  line-height: 1.35;
+  margin: 1.1em 0 0.45em;
+}
+.md h3 { font-size: 1.06rem; }
+.md h4 { font-size: 1rem; }
+.md h5, .md h6 { font-size: 0.94rem; }
+.md ul, .md ol { margin: 0 0 0.8em; padding-left: 1.4em; }
+.md li { margin: 0.2em 0; }
+.md li > ul, .md li > ol { margin: 0.2em 0 0.2em; }
+.md li::marker { color: var(--text-faint); }
+.md ol > li::marker { color: var(--primary); font-weight: 600; }
+.md a { color: var(--primary-600); text-decoration: underline; text-underline-offset: 2px; }
+.md hr { border: none; border-top: 1px solid var(--border); margin: 1em 0; }
+.md blockquote {
+  margin: 0 0 0.8em;
+  padding: 0.5em 0.9em;
+  border-left: 3px solid var(--primary-100);
+  background: var(--bg-subtle);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.md .inline-code { font-size: 0.86em; }
+
+.md-table { overflow-x: auto; margin: 0 0 0.9em; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+.md-table table { border-collapse: collapse; width: 100%; font-size: 0.88rem; }
+.md-table th, .md-table td { padding: 0.45em 0.8em; text-align: left; border-bottom: 1px solid var(--border-subtle); }
+.md-table th { background: var(--bg-subtle); color: var(--text); font-weight: 600; }
+.md-table tr:last-child td { border-bottom: none; }
+
+.md-code {
+  margin: 0 0 0.9em;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: #fbfcfe;
+  overflow: hidden;
+}
+.md-code__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 8px 6px 14px;
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-subtle);
+}
+.md-code__lang { font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.md-code__copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font: inherit;
+  font-size: 0.78rem;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+.md-code__copy:hover { background: var(--bg-muted); color: var(--text); }
+.md-code__pre {
+  margin: 0;
+  padding: 12px 14px;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.83rem;
+  line-height: 1.65;
+  color: #1e293b;
+}
+.md-code__line { white-space: pre; }

@@ -1,0 +1,53 @@
+.questions__actions { display: flex; justify-content: flex-end; gap: 10px; }
+.questions { display: flex; flex-direction: column; gap: 18px; }
+.analysis-note { font-size: 13.5px; color: var(--text-muted); }
+
+.question { display: flex; flex-direction: column; gap: 16px; padding: 22px 24px; min-width: 0; }
+.question__head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.question__number {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  background: var(--primary-50);
+  color: var(--primary-600);
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+.question__title { font-size: 19px; letter-spacing: -0.02em; flex: 1; min-width: 200px; }
+.question__badges { display: flex; gap: 6px; flex-wrap: wrap; }
+
+.question__examples { display: grid; gap: 10px; }
+.example {
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg-subtle);
+  font-size: 14px;
+  color: var(--text-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+.example__label { font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.example__key { font-weight: 600; color: var(--text); }
+.example__code { font-family: var(--font-mono); font-size: 13px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.example__explain { color: var(--text-muted); }
+
+.question__hints {
+  margin: 0 0 10px;
+  padding: 10px 14px 10px 34px;
+  border-radius: var(--radius-md);
+  background: var(--warning-50);
+  border: 1px solid #fde68a;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.question__hints li + li { margin-top: 6px; }
+
+.question__footer { display: flex; gap: 8px; flex-wrap: wrap; padding-top: 4px; border-top: 1px solid var(--border-subtle); padding-top: 14px; }
+.question__approach { padding: 12px 14px; border-radius: var(--radius-md); background: var(--primary-50); border: 1px solid var(--primary-100); }

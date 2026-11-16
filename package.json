@@ -1,0 +1,45 @@
+{
+  "name": "algoverse",
+  "private": true,
+  "version": "0.7.0",
+  "description": "AlgoVerse \u2013 AI-Powered DSA Learning Platform. Learn. Practice. Master.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "server": "node server/index.js",
+    "dev:full": "node scripts/dev-all.mjs",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node server/index.js --production",
+    "practice:tests": "python3 scripts/practice/generate_tests.py",
+    "ai:check": "node scripts/ai-check.mjs",
+    "db:seed-sql": "node scripts/db/generate-catalog-seed.mjs",
+    "judge0:check": "node scripts/judge0-check.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.8.0",
+    "@codemirror/commands": "^6.11.1",
+    "@codemirror/lang-cpp": "^6.0.3",
+    "@codemirror/lang-java": "^6.0.2",
+    "@codemirror/lang-python": "^6.2.1",
+    "@codemirror/language": "^6.13.1",
+    "@codemirror/state": "^6.7.6",
+    "@codemirror/view": "^6.43.15",
+    "@lezer/highlight": "^1.2.5",
+    "@supabase/supabase-js": "^2.119.0",
+    "codemirror": "^6.0.2",
+    "compression": "^1.8.2",
+    "express": "^5.3.0",
+    "lucide-react": "^0.460.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
